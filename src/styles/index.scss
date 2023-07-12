@@ -1,5 +1,112 @@
 // Your code here
+@import url('./reset.scss');
+
+
+$main-font-color: #fff;
+$main-background: #121425;
+$section-background: #0b0e18;
+$base-space: 10px;
+
+.wrapper {
+  background: $main-background;
+  color: $main-font-color;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding-top: $base-space;
+  font-size: 14px;
+  line-height: 1.2;
+
+  .capsule-information {
+    max-width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    & > div {
+        flex-basis: calc(50% - 10px);
+
+        &:nth-child(2) {
+          background: $section-background;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+    }
+
+    .coffee-specs {
+      flex-basis: 100%;
+      background: $section-background;
+      padding: $base-space;
+
+      & > ul > li {
+        display: flex;
+        justify-content: space-between;
+
+        & > ul {
+          display: flex;
+
+          & > li {
+            margin-right:  10px;
+          }
+        }
+      }
+
+      .responce-key {
+        margin-top: 10px;
+      }
+
+      .images {
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-evenly;
+
+        img {
+          width: 100px;
+          height: 100px;
+        }
+      }
+    }
+  }
+
+  h1, h2, h3 {
+    font-weight: bold;
+    line-height: 1.2;
+  }
+
+  @media (max-width: 767px) {
+    h1 {
+      font-size: 24px;
+    }
+    
+    h2 {
+      font-size: 18px;
+    }
+    
+    h3 {
+      font-size: 16px;
+    }
+  }
+
+  // Desktop styles
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 36px;
+    }
+    
+    h2 {
+      font-size: 24px;
+    }
+    
+    h3 {
+      font-size: 20px;
+    }
+  }
+
 
 .wave {
   background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 1600 198' style='enable-background:new 0 0 1600 198;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:url(%23SVGID_1_);%7D%0A%3C/style%3E%3ClinearGradient id='SVGID_1_' gradientUnits='userSpaceOnUse' x1='320.6993' y1='377.5869' x2='320.7004' y2='378.692' gradientTransform='matrix(-1600 0 0 -198.0004 513920 75060.1484)'%3E%3Cstop offset='1.805556e-02' style='stop-color:%233141BE'/%3E%3Cstop offset='0.4847' style='stop-color:%235F5BD5'/%3E%3Cstop offset='0.8708' style='stop-color:%238545C5'/%3E%3Cstop offset='0.9917' style='stop-color:%239A39BC'/%3E%3C/linearGradient%3E%3Cpath class='st0' d='M1600,121c-121.2,0-257-32.4-347-31c-130,2-195.2,62.8-440,63C636,153,536,41,417,41c-98,0-255.9,80-417,80v77 h1600C1600,198,1600,150,1600,121z'/%3E%3C/svg%3E%0A");
 }
+
+}
+
